@@ -1,4 +1,13 @@
 // This file lists all products for the home page. Add new products here as needed.
+export const COMMON_PRODUCT_DESCRIPTION = {
+  "Usage/Application": "All Type Of Indoors",
+  "Material": "Fiber Mesh and Aluminium Frame",
+  "Suitable For": "All Usages",
+  "Type": "Foldable",
+  "Color": "All Colours",
+  "Brand": "HanumanScreens"
+};
+
 export const mesh_products = [
   {
     title: 'Pleated Mesh Door',
@@ -9,6 +18,14 @@ export const mesh_products = [
       require('./mesh_products/pleated-mesh-door/2.jpg'),
       require('./mesh_products/pleated-mesh-door/3.jpg'),
     ],
+    description: {
+      "Usage/Application": "All Type Of Indoors",
+      "Material": "Fiber Mesh and Aluminium Frame",
+      "Suitable For": "All Usages",
+      "Type": "Foldable",
+      "Color": "All Colours",
+      "Brand": "HanumanScreens"
+    }
   },
   {
     title: 'Pleated Mesh Sliding Door',
@@ -19,7 +36,7 @@ export const mesh_products = [
       require('./mesh_products/pleated-mesh-sliding-door/2.jpg'),
       require('./mesh_products/pleated-mesh-sliding-door/3.jpg'),
     ],
-  },
+  }, // ...add description for each product as needed
   {
     title: 'Aluminium Mosquito Mesh',
     folder: 'aluminium-mosquito-mesh',
@@ -82,6 +99,14 @@ export const blinds_products = [
       require('./blinds_products/zebra-blinds/2.jpg'),
       require('./blinds_products/zebra-blinds/3.jpg'),
     ],
+    description: {
+      "Usage/Application": "Living Room, Office",
+      "Material": "Polyester",
+      "Suitable For": "Windows",
+      "Type": "Zebra",
+      "Color": "Custom Colours",
+      "Brand": "HanumanScreens"
+    }
   },
   {
     title: 'Roller Blinds',

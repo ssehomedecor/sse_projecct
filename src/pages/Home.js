@@ -2,7 +2,7 @@
 
 
 import React, { useState, useRef } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 import { mesh_products, blinds_products } from '../productData';
 import '../App.css';
 
@@ -44,7 +44,7 @@ function Home() {
       {/* Top section: Split horizontal carousels for Mesh and Blinds */}
       <div className="home-carousel-split">
         <div className="carousel-column carousel-mesh">
-          <div className="carousel-title">Mesh and Grill Products</div>
+          {/* <div className="carousel-title">Mesh and Grill Products</div> */}
           <div className="carousel-scroll" style={{overflowX: 'hidden', position: 'relative', height: '100%'}}>
             {[meshPrevIndex, meshIndex].filter((v, i, arr) => arr.indexOf(v) === i).map((idx, i, arr) => {
               const isCurrent = idx === meshIndex;
@@ -101,7 +101,7 @@ function Home() {
           </div>
         </div>
         <div className="carousel-column carousel-blinds">
-          <div className="carousel-title">Blinds Products</div>
+          {/* <div className="carousel-title">Blinds Products</div> */}
           <div className="carousel-scroll" style={{overflowX: 'hidden', position: 'relative', height: '100%'}}>
             {[blindsPrevIndex, blindsIndex].filter((v, i, arr) => arr.indexOf(v) === i).map((idx, i, arr) => {
               const isCurrent = idx === blindsIndex;
@@ -217,13 +217,10 @@ function Home() {
               style={{cursor: 'pointer'}}
               onClick={() => navigate(`/products/${product.folder}`)}
             />
-            <div className="product-title">{product.title}</div>
-            <div
-              className="product-more-link"
-              style={{color: '#2d3e50', fontSize: '0.95rem', marginTop: 4, textDecoration: 'underline', fontWeight: 500, cursor: 'pointer'}}
-              onClick={() => navigate(`/products/${product.folder}`)}
-            >
-              Click for more images
+            <div className="product-title" style={{ fontSize: '0.98rem', marginTop: 8 }}>
+              <Link to={`/products/${product.folder}`} style={{ color: '#1976d2', textDecoration: 'underline' }}>
+                {product.title}
+              </Link>
             </div>
           </div>
         ))}
@@ -240,13 +237,10 @@ function Home() {
               style={{cursor: 'pointer'}}
               onClick={() => navigate(`/products/${product.folder}`)}
             />
-            <div className="product-title">{product.title}</div>
-            <div
-              className="product-more-link"
-              style={{color: '#2d3e50', fontSize: '0.95rem', marginTop: 4, textDecoration: 'underline', fontWeight: 500, cursor: 'pointer'}}
-              onClick={() => navigate(`/products/${product.folder}`)}
-            >
-              Click for more images
+            <div className="product-title" style={{ fontSize: '0.98rem', marginTop: 8 }}>
+              <Link to={`/products/${product.folder}`} style={{ color: '#1976d2', textDecoration: 'underline' }}>
+                {product.title}
+              </Link>
             </div>
           </div>
         ))}
